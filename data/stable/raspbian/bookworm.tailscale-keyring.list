@@ -1,2 +1,2 @@
 # Tailscale packages for raspbian bookworm
-deb [signed-by=/usr/share/keyrings/tailscale-mirror-archive-keyring.gpg] https://raw.githubusercontent.com/hopleus/TailScale-APT-Mirror/main/data/stable/raspbian bookworm main
+deb [signed-by=/usr/share/keyrings/tailscale-mirror-archive-keyring.gpg] https://raw.githubusercontent.com/hopleus/tailscale-mirror/main/data/stable/raspbian bookworm main

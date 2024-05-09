@@ -1,2 +1,2 @@
 # Tailscale packages for raspbian buster
-deb https://raw.githubusercontent.com/hopleus/TailScale-APT-Mirror/main/data/stable/raspbian buster main
+deb https://raw.githubusercontent.com/hopleus/tailscale-mirror/main/data/stable/raspbian buster main

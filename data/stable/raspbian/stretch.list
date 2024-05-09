@@ -1,2 +1,2 @@
 # Tailscale packages for raspbian stretch
-deb https://raw.githubusercontent.com/hopleus/TailScale-APT-Mirror/main/data/stable/raspbian stretch main
+deb https://raw.githubusercontent.com/hopleus/tailscale-mirror/main/data/stable/raspbian stretch main

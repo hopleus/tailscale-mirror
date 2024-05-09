@@ -1,2 +1,2 @@
 # Tailscale packages for ubuntu mantic
-deb [signed-by=/usr/share/keyrings/tailscale-mirror-archive-keyring.gpg] https://raw.githubusercontent.com/hopleus/TailScale-APT-Mirror/main/data/stable/ubuntu mantic main
+deb [signed-by=/usr/share/keyrings/tailscale-mirror-archive-keyring.gpg] https://raw.githubusercontent.com/hopleus/tailscale-mirror/main/data/stable/ubuntu mantic main
