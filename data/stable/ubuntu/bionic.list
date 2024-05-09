@@ -1,0 +1,2 @@
+# Tailscale packages for ubuntu bionic
+deb https://raw.githubusercontent.com/hopleus/TailScale-APT-Mirror/main/data/stable/ubuntu bionic main

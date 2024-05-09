@@ -1,0 +1,2 @@
+# Tailscale packages for raspbian bullseye
+deb [signed-by=/usr/share/keyrings/tailscale-mirror-archive-keyring.gpg] https://raw.githubusercontent.com/hopleus/TailScale-APT-Mirror/main/data/stable/raspbian bullseye main

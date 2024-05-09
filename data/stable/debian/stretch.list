@@ -1,0 +1,2 @@
+# Tailscale packages for debian stretch
+deb https://raw.githubusercontent.com/hopleus/TailScale-APT-Mirror/main/data/stable/debian stretch main
