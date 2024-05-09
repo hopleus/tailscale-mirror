@@ -191,7 +191,7 @@ var OSTracks = []OSTrack{
 
 const (
 	repo       = "https://pkgs.tailscale.com"
-	mirror     = "https://raw.githubusercontent.com/hopleus/TailScale-APT-Mirror/main/data"
+	mirror     = "https://raw.githubusercontent.com/hopleus/tailscale-mirror/main/data"
 	dataDir    = "./data"
 	docDir     = "./docs"
 	stubDir    = "./stubs"
