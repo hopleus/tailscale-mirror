@@ -192,9 +192,9 @@ var OSTracks = []OSTrack{
 const (
 	repo       = "https://pkgs.tailscale.com"
 	mirror     = "https://raw.githubusercontent.com/hopleus/tailscale-mirror/main/data"
-	dataDir    = "./data"
-	docDir     = "./docs"
-	stubDir    = "./stubs"
+	dataDir    = "../data"
+	docDir     = "../docs"
+	stubDir    = "../stubs"
 	minVersion = "1.66.0"
 
 	regExpReleasePackagePattern = `\w{32}\s\d+(.*Packages(\.gz)?)\s`
