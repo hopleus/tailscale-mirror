@@ -72,6 +72,25 @@ SHA1: ff18fc45b91f400e6f085efc544cf6f7785f06c6
 SHA256: ee30c16c556633029efd15021e4dfe2dd392c7464e3a50528d6544fcee28bcc5
 
 Package: tailscale
+Version: 1.66.1
+Section: net
+Priority: extra
+Architecture: i386
+Maintainer: Tailscale Inc <info@tailscale.com>
+Installed-Size: 44334
+Replaces: tailscale-relay
+Depends: iptables
+Recommends: tailscale-archive-keyring (>= 1.35.181), iproute2
+Conflicts: tailscale-relay
+Homepage: https://www.tailscale.com
+Description: The easiest, most secure, cross platform way to use WireGuard + oauth2 + 2FA/SSO
+Filename: pool/tailscale_1.66.1_i386.deb
+Size: 25011538
+MD5sum: 4370b429d57bf7f3168046f09f8eb905
+SHA1: ab4f4433cc96effbc9c82433198939186f74cfb7
+SHA256: 0bebf357d9dbe3ff383b4a923b6dda941222eeac1e9aced0a0ec8e0d0beb637b
+
+Package: tailscale
 Version: 1.4.0
 Section: net
 Priority: extra
