@@ -195,7 +195,7 @@ const (
 	dataDir    = "../data"
 	docDir     = "../docs"
 	stubDir    = "../stubs"
-	minVersion = "1.72.0"
+	minVersion = "1.72.1"
 
 	regExpReleasePackagePattern = `\w{32}\s\d+(.*Packages(\.gz)?)\s`
 	regExpPackageSectionPattern = `(?m)(\n\n|\n$)`
