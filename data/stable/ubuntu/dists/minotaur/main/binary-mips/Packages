@@ -744,6 +744,25 @@ SHA1: 63450d141f50b84a832d9c957a483a1c01b25e7b
 SHA256: 5511691c315ed7971b32a692c78074b0ef4e16b75c499b9fe9ca7b05eb547072
 
 Package: tailscale
+Version: 1.76.1
+Section: net
+Priority: extra
+Architecture: mips
+Maintainer: Tailscale Inc <info@tailscale.com>
+Installed-Size: 51512
+Replaces: tailscale-relay
+Depends: iptables
+Recommends: tailscale-archive-keyring (>= 1.35.181), iproute2
+Conflicts: tailscale-relay
+Homepage: https://www.tailscale.com
+Description: The easiest, most secure, cross platform way to use WireGuard + oauth2 + 2FA/SSO
+Filename: pool/tailscale_1.76.1_mips.deb
+Size: 25514528
+MD5sum: 5c923d328ee5ff75da2c2d1a08e429ad
+SHA1: 5e617cc6ab1873d77eff430993dddc809302c16a
+SHA256: dc5fba774e640be7e3f2562fcee9913328c3f9a91782de1afdfa9f1581c96558
+
+Package: tailscale
 Version: 1.52.1
 Section: net
 Priority: extra
@@ -1206,6 +1225,25 @@ Size: 24794140
 MD5sum: 6a2c771284ead802d032e7686dee4701
 SHA1: b62f45ec417e7e9a6976f47bbbf3593605ed5971
 SHA256: f62dcf72a1cedc384463b74a06e39cc07602a167239a1bb088a9b1b00989b3f6
+
+Package: tailscale
+Version: 1.76.6
+Section: net
+Priority: extra
+Architecture: mips
+Maintainer: Tailscale Inc <info@tailscale.com>
+Installed-Size: 51512
+Replaces: tailscale-relay
+Depends: iptables
+Recommends: tailscale-archive-keyring (>= 1.35.181), iproute2
+Conflicts: tailscale-relay
+Homepage: https://www.tailscale.com
+Description: The easiest, most secure, cross platform way to use WireGuard + oauth2 + 2FA/SSO
+Filename: pool/tailscale_1.76.6_mips.deb
+Size: 25516284
+MD5sum: 62a3eb6459f28603533005048406cb0f
+SHA1: 87e35cfd4ac7fdd88832eccbb7e6092a2297c79d
+SHA256: c5eccc5da86e0fa862c608ef8daa80cb18fc09f4d12f8fdc14036c23a11264c9
 
 Package: tailscale
 Version: 1.22.0
