@@ -1,9 +1,11 @@
 package main
 
 import (
+	"encoding/xml"
 	"fmt"
 	"os"
 	"strings"
+	"time"
 )
 
 func ReplaceSourceRepoToMirror(url string) error {
@@ -19,6 +21,12 @@ func ReplaceSourceRepoToMirror(url string) error {
 		if strings.Contains(v, repo) {
 			lines[k] = strings.Replace(lines[k], repo, mirror, -1)
 		}
+		if strings.Contains(v, "tailscale-stable") {
+			lines[k] = strings.Replace(lines[k], "tailscale-stable", "tailscale-mirror-stable", -1)
+		}
+		if strings.Contains(v, "Tailscale stable") {
+			lines[k] = strings.Replace(lines[k], "Tailscale stable", "Tailscale Mirror stable", -1)
+		}
 		if strings.Contains(v, "tailscale-archive-keyring") {
 			lines[k] = strings.Replace(lines[k], "tailscale-archive-keyring", "tailscale-mirror-archive-keyring", -1)
 		}
@@ -33,6 +41,87 @@ func RepoDist(t OSTrack) (string, string) {
 	path := fmt.Sprintf("%s/%s/%s", repo, t.Channel, t.OS)
 
 	return path, fmt.Sprintf("%s/dists/%s", path, t.Version)
+}
+
+func RepoMD(t OSTrack, arch string) (string, string) {
+	repoVersion := t.Version
+	if repoVersion == "" {
+		repoVersion = t.OS
+	}
+
+	dist := fmt.Sprintf("%s/%s/%s/%s/%s", repo, t.Channel, t.OS, repoVersion, arch)
+	md := fmt.Sprintf("%s/repodata/repomd.xml", dist)
+
+	return md, dist
+}
+
+func RepoData(t OSTrack, arch, repoMd string) (string, []string, error) {
+	path := LocalRepoData(repoMd)
+	content, err := GetContentFromFile(path)
+	if err != nil {
+		return "", nil, fmt.Errorf("GetContentFromFile - %w", err)
+	}
+
+	if content == "" {
+		return "", nil, fmt.Errorf("no repo data")
+	}
+
+	primary, files, err := ParseRepoData(content, 1)
+	if err != nil {
+		return "", nil, fmt.Errorf("ParseRepoData: %w", err)
+	}
+
+	repoVersion := t.Version
+	if repoVersion == "" {
+		repoVersion = t.OS
+	}
+
+	primary = fmt.Sprintf("%s/%s/%s/%s/%s/%s", repo, t.Channel, t.OS, repoVersion, arch, primary)
+
+	for idx, file := range files {
+		files[idx] = fmt.Sprintf("%s/%s/%s/%s/%s/%s", repo, t.Channel, t.OS, repoVersion, arch, file)
+	}
+
+	return primary, files, nil
+}
+
+func ParseRepoData(content string, attemps int) (string, []string, error) {
+	type RepoMD struct {
+		Data []struct {
+			XMLName  xml.Name `xml:"data"`
+			Type     string   `xml:"type,attr"`
+			Location struct {
+				XMLName xml.Name `xml:"location"`
+				Href    string   `xml:"href,attr"`
+			} `xml:"location"`
+		} `xml:"data"`
+	}
+
+	var repoMD RepoMD
+	if err := xml.Unmarshal([]byte(content), &repoMD); err != nil {
+		attemps += 1
+
+		if attemps > 2 {
+			return "", nil, fmt.Errorf("xml.Unmarshal - %w", err)
+		}
+
+		time.Sleep(1 * time.Second)
+
+		return ParseRepoData(content, attemps)
+	}
+
+	var primary string
+	files := make([]string, 0)
+
+	for _, md := range repoMD.Data {
+		if md.Type == "primary" {
+			primary = md.Location.Href
+		}
+
+		files = append(files, md.Location.Href)
+	}
+
+	return primary, files, nil
 }
 
 func RepoRelease(dist string) []string {

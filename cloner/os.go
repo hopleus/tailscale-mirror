@@ -15,6 +15,14 @@ func (t *OSTrack) Stub() string {
 		return fmt.Sprintf("%s/apt.md", stubDir)
 	}
 
+	if t.PackageType == "yum" {
+		return fmt.Sprintf("%s/yum.md", stubDir)
+	}
+
+	if t.PackageType == "dnf" {
+		return fmt.Sprintf("%s/dnf.md", stubDir)
+	}
+
 	return ""
 }
 
@@ -36,7 +44,7 @@ func (t *OSTrack) UrlRepo() []string {
 	}
 
 	// TODO: Add in the future
-	if InArray([]string{"centos", "fedora"}, t.OS) {
+	if InArray([]string{"centos", "fedora", "rhel", "amazon-linux"}, t.OS) {
 		return []string{
 			fmt.Sprintf("%s/tailscale.repo", path),
 			fmt.Sprintf("%s/repo.gpg", path),

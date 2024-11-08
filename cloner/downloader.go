@@ -15,7 +15,7 @@ func DownloadFiles(url []string, rewrite bool) {
 		fmt.Printf("\033[2K\r[%d / %d] ", k+1, count)
 
 		if err := DownloadFile(v, path, rewrite); err != nil {
-			fmt.Printf("[Error] DownloadFile - %w", err)
+			fmt.Printf("[Error] DownloadFile - %s", err.Error())
 		}
 	}
 }
@@ -27,6 +27,20 @@ func DownloadFile(url, path string, rewrite bool) error {
 		if _, err = os.Stat(path); err == nil {
 			return nil
 		}
+	}
+
+	fmt.Printf("Downloading: %s...", url)
+
+	content, err := http.Get(url)
+	if err != nil {
+		fmt.Printf("[Error] DownloadFile - http.Get - %s\n", url)
+		return fmt.Errorf("http.Get - %w", err)
+	}
+
+	defer content.Body.Close()
+
+	if content.StatusCode == 404 {
+		return fmt.Errorf("404 Not Found")
 	}
 
 	if err = CreateDir(path); err != nil {
@@ -41,15 +55,6 @@ func DownloadFile(url, path string, rewrite bool) error {
 	}
 
 	defer out.Close()
-	fmt.Printf("Downloading: %s...", url)
-
-	content, err := http.Get(url)
-	if err != nil {
-		fmt.Printf("[Error] DownloadFile - http.Get - %s\n", url)
-		return fmt.Errorf("http.Get - %w", err)
-	}
-
-	defer content.Body.Close()
 
 	if _, err = io.Copy(out, content.Body); err != nil {
 		fmt.Printf("[Error] DownloadFile - io.Copy - %s <= %s\n", url, path)

@@ -20,12 +20,17 @@ func GenerateDoc(track OSTrack) {
 
 	if len(urlRepo) > 1 {
 		content = strings.ReplaceAll(content, "<SIGNER>", urlRepo[1])
-		content = strings.ReplaceAll(content, "<LIST>", urlRepo[0])
+		content = strings.ReplaceAll(content, "<REPO>", urlRepo[0])
 	} else {
-		// TODO: For yum, dnf, etc..
+		return
 	}
 
-	docPath := fmt.Sprintf("%s/%s/%s/%s.md", docDir, track.Channel, track.OS, track.Version)
+	docName := track.Version
+	if docName == "" {
+		docName = track.OS
+	}
+
+	docPath := fmt.Sprintf("%s/%s/%s/%s.md", docDir, track.Channel, track.OS, docName)
 	if err := CreateDir(docPath); err != nil {
 		fmt.Printf("[Error] Error write doc - %v", err)
 		return
