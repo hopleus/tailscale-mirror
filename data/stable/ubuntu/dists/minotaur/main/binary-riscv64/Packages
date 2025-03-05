@@ -205,6 +205,25 @@ SHA1: 994a255f4e29f742afa2eb22ecf9dc68cbdb424c
 SHA256: b19b21fec82284fba31e800b55d88737e5bd6a5b3fb82a47af8590c1e0abb68f
 
 Package: tailscale
+Version: 1.80.2
+Section: net
+Priority: extra
+Architecture: riscv64
+Maintainer: Tailscale Inc <info@tailscale.com>
+Installed-Size: 50566
+Replaces: tailscale-relay
+Depends: iptables
+Recommends: tailscale-archive-keyring (>= 1.35.181), iproute2
+Conflicts: tailscale-relay
+Homepage: https://www.tailscale.com
+Description: The easiest, most secure, cross platform way to use WireGuard + oauth2 + 2FA/SSO
+Filename: pool/tailscale_1.80.2_riscv64.deb
+Size: 27735932
+MD5sum: 10adcd1229c198b68ff52423d5639b0a
+SHA1: 532357489089a1354e90e2f2370eedc79b258798
+SHA256: 72c4ee1b7aa5b5b63a7ae0775b29ec2b3d1b6a0dd2821cc0cf7e132e05ff4418
+
+Package: tailscale
 Version: 1.42.0
 Section: net
 Priority: extra
@@ -959,6 +978,25 @@ Size: 17334918
 MD5sum: 1199a610a3878f95012f9ed060d8cead
 SHA1: 12611b471b79d867ef4cb54986044e522743ad84
 SHA256: 93e82cf66eeb659327d4fa64322713195c3ec41d49f62852a25cde21a76f362f
+
+Package: tailscale
+Version: 1.80.3
+Section: net
+Priority: extra
+Architecture: riscv64
+Maintainer: Tailscale Inc <info@tailscale.com>
+Installed-Size: 50567
+Replaces: tailscale-relay
+Depends: iptables
+Recommends: tailscale-archive-keyring (>= 1.35.181), iproute2
+Conflicts: tailscale-relay
+Homepage: https://www.tailscale.com
+Description: The easiest, most secure, cross platform way to use WireGuard + oauth2 + 2FA/SSO
+Filename: pool/tailscale_1.80.3_riscv64.deb
+Size: 27736786
+MD5sum: 52bd6051a5f38362be442aec6ce7f679
+SHA1: efa2b451cbb8a2141a3521f2d04135f04f8bcc86
+SHA256: 1620e2f8cf6850c391a17bc7f69ec77be8aca2d8e5a3c281bb1e29abd4cf2b2f
 
 Package: tailscale
 Version: 1.58.1
