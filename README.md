@@ -6,6 +6,12 @@ APT зеркало для [pkgs.tailscale.com](https://pkgs.tailscale.com) ([Git
 ### Доступные версии:
 Tailscale: 1.66.0 - 1.80.3
 
+## Установка
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/hopleus/tailscale-mirror/main/install.sh | sh
+```
+
 ## Документация
 - [Ubuntu 16.04 LTS (Xenial)](docs/stable/ubuntu/xenial.md)
 - [Ubuntu 18.04 LTS (Bionic)](docs/stable/ubuntu/bionic.md)
