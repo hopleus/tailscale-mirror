@@ -17,7 +17,7 @@ func main() {
 		if osTrack.PackageType == "yum" || osTrack.PackageType == "dnf" {
 			for _, arch := range ArchList {
 				repoMd, dist := RepoMD(osTrack, arch)
-				DownloadFiles([]string{repoMd}, true)
+				DownloadFiles([]string{repoMd, fmt.Sprintf("%s.asc", repoMd)}, true)
 
 				primary, files, err := RepoData(osTrack, arch, repoMd)
 				if err != nil {
