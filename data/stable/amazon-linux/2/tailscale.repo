@@ -1,0 +1,8 @@
+[tailscale-stable]
+name=Tailscale stable
+baseurl=https://raw.githubusercontent.com/hopleus/tailscale-mirror/main/data/stable/amazon-linux/2/$basearch
+enabled=1
+type=rpm
+repo_gpgcheck=1
+gpgcheck=1
+gpgkey=https://raw.githubusercontent.com/hopleus/tailscale-mirror/main/data/stable/amazon-linux/2/repo.gpg

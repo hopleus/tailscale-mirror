@@ -51,6 +51,10 @@ func DownloadFile(url, path string, rewrite bool) error {
 
 	defer content.Body.Close()
 
+	if content.StatusCode == 404 {
+		return fmt.Errorf("404 Not Found")
+	}
+
 	if _, err = io.Copy(out, content.Body); err != nil {
 		fmt.Printf("[Error] DownloadFile - io.Copy - %s <= %s\n", url, path)
 		return fmt.Errorf("io.Copy - %w", err)
