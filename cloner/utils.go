@@ -1,5 +1,25 @@
 package main
 
+import (
+	"compress/gzip"
+	"fmt"
+	"os"
+)
+
+func ReaderXmlGz(path string) (*os.File, *gzip.Reader, error) {
+	file, err := os.Open(path)
+	if err != nil {
+		return nil, nil, fmt.Errorf("os.Open - %w", err)
+	}
+
+	reader, err := gzip.NewReader(file)
+	if err != nil {
+		return nil, nil, fmt.Errorf("gzip.NewReader - %w", err)
+	}
+
+	return file, reader, nil
+}
+
 func InArray[T comparable](list []T, include T) bool {
 	for _, v := range list {
 		if v == include {

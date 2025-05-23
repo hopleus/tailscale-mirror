@@ -1,6 +1,7 @@
 package main
 
 import (
+	"errors"
 	"fmt"
 	"os"
 	"path/filepath"
@@ -18,6 +19,14 @@ func CreateDir(path string) error {
 }
 
 func GetContentFromFile(path string) (string, error) {
+	if _, err := os.Stat(path); err != nil {
+		if !errors.Is(err, os.ErrNotExist) {
+			fmt.Println("Error read content: %w", err)
+		}
+
+		return "", nil
+	}
+
 	content, err := os.ReadFile(path)
 	if err != nil {
 		fmt.Printf("[Error] Read file[%s] - %w\n", path, err)

@@ -1,5 +1,6 @@
 package main
 
+var ArchList = []string{"i386", "x86_64", "aarch64", "riscv64"}
 var OS = []string{"ubuntu", "debian", "raspian", "centos", "fedora", "rhel", "amazon-linux", "oracle", "photon"}
 var OSTracks = []OSTrack{
 	// ubuntu (legacy)
@@ -103,6 +104,20 @@ var OSTracks = []OSTrack{
 		Channel:     "stable",
 	},
 	{
+		OS:          "ubuntu",
+		Version:     "oracular",
+		PackageType: "apt",
+		AptKeyType:  "keyring",
+		Channel:     "stable",
+	},
+	{
+		OS:          "ubuntu",
+		Version:     "plucky",
+		PackageType: "apt",
+		AptKeyType:  "keyring",
+		Channel:     "stable",
+	},
+	{
 		OS:          "debian",
 		Version:     "stretch",
 		PackageType: "apt",
@@ -172,21 +187,77 @@ var OSTracks = []OSTrack{
 		AptKeyType:  "keyring",
 		Channel:     "stable",
 	},
-	// TODO: Add centos, fedora, etc... in the future
 	// centos (yum)
-	// {
-	// 	OS:          "centos",
-	// 	Version:     "7",
-	// 	PackageType: "yum",
-	// 	Channel:     "stable",
-	// },
+	{
+		OS:          "centos",
+		Version:     "7",
+		PackageType: "yum",
+		Channel:     "stable",
+	},
 	// centos (dnf)
-	// {
-	// 	OS:          "centos",
-	// 	Version:     "8",
-	// 	PackageType: "dnf",
-	// 	Channel:     "stable",
-	// },
+	{
+		OS:          "centos",
+		Version:     "8",
+		PackageType: "dnf",
+		Channel:     "stable",
+	},
+	{
+		OS:          "centos",
+		Version:     "9",
+		PackageType: "dnf",
+		Channel:     "stable",
+	},
+	{
+		OS:          "centos",
+		Version:     "10",
+		PackageType: "dnf",
+		Channel:     "stable",
+	},
+	// fedora (dhf)
+	{
+		OS:          "fedora",
+		PackageType: "dnf",
+		Channel:     "stable",
+	},
+	// rhel (yum)
+	{
+		OS:          "rhel",
+		Version:     "7",
+		PackageType: "yum",
+		Channel:     "stable",
+	},
+	// rhel (dnf)
+	{
+		OS:          "rhel",
+		Version:     "8",
+		PackageType: "dnf",
+		Channel:     "stable",
+	},
+	{
+		OS:          "rhel",
+		Version:     "9",
+		PackageType: "dnf",
+		Channel:     "stable",
+	},
+	// amazon-linux
+	{
+		OS:          "amazon-linux",
+		Version:     "2",
+		PackageType: "yum",
+		Channel:     "stable",
+	},
+	{
+		OS:          "amazon-linux",
+		Version:     "2022",
+		PackageType: "yum",
+		Channel:     "stable",
+	},
+	{
+		OS:          "amazon-linux",
+		Version:     "2023",
+		PackageType: "yum",
+		Channel:     "stable",
+	},
 }
 
 const (

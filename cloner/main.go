@@ -14,18 +14,40 @@ func main() {
 			continue
 		}
 
-		repo, dist := RepoDist(osTrack)
-		release := RepoRelease(dist)
-		DownloadFiles(release, true)
+		if osTrack.PackageType == "yum" || osTrack.PackageType == "dnf" {
+			for _, arch := range ArchList {
+				repoMd, dist := RepoMD(osTrack, arch)
+				DownloadFiles([]string{repoMd}, true)
 
-		for _, _release := range release {
-			packages, err := ReleasePackages(dist, _release)
-			if err != nil {
-				fmt.Println("[Error] ReleasePackages: %w", err)
-				continue
+				primary, files, err := RepoData(osTrack, arch, repoMd)
+				if err != nil {
+					fmt.Println("[Error] RepoData -", err)
+					continue
+				}
+
+				DownloadFiles(files, true)
+				rpm, err := PoolRpmFromPrimaryMD(dist, primary)
+				if err != nil {
+					fmt.Println("[Error] PoolRpmFromPrimaryMD: %w", err)
+					continue
+				}
+
+				debs = append(debs, rpm...)
 			}
+		} else {
+			repo, dist := RepoDist(osTrack)
+			release := RepoRelease(dist)
+			DownloadFiles(release, true)
 
-			debs = append(debs, PoolFromPackages(dist, repo, packages)...)
+			for _, _release := range release {
+				packages, err := ReleasePackages(dist, _release)
+				if err != nil {
+					fmt.Println("[Error] ReleasePackages: %w", err)
+					continue
+				}
+
+				debs = append(debs, PoolFromPackages(dist, repo, packages)...)
+			}
 		}
 
 		GenerateDoc(osTrack)
