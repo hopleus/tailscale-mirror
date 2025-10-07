@@ -1,11 +1,11 @@
 # TailScale APT Зеркало
-![Последняя версия](https://img.shields.io/badge/Последняя_версия-1.88.1-blue)
+![Последняя версия](https://img.shields.io/badge/Последняя_версия-1.88.3-blue)
 
 APT зеркало для [pkgs.tailscale.com](https://pkgs.tailscale.com) ([GitHub](https://github.com/tailscale/tailscale))
 
 ### Доступные версии:
-- 1.66.0 - 1.88.1 (debian, raspbian, ubuntu)
-- 1.84.0 - 1.88.1 (centos, fedora, rhel, amazon linux)
+- 1.66.0 - 1.88.3 (debian, raspbian, ubuntu)
+- 1.84.0 - 1.88.3 (centos, fedora, rhel, amazon linux)
 
 ## Документация
 - [Ubuntu 16.04 LTS (Xenial)](docs/stable/ubuntu/xenial.md)
@@ -23,16 +23,20 @@ APT зеркало для [pkgs.tailscale.com](https://pkgs.tailscale.com) ([Git
 - [Ubuntu 24.04 (Noble Numbat)](docs/stable/ubuntu/noble.md)
 - [Ubuntu 24.10 (Oracular Oriole)](docs/stable/ubuntu/oracular.md)
 - [Ubuntu 25.04 (Plucky Puffin)](docs/stable/ubuntu/plucky.md)
+- [Ubuntu 25.10 (Questing Quokka)](docs/stable/ubuntu/questing.md)
 - [Debian Stretch](docs/stable/debian/stretch.md)
 - [Debian Buster](docs/stable/debian/buster.md)
-- [Debian Bullseye (oldstable)](docs/stable/debian/bullseye.md)
-- [Debian Bookworm (stable)](docs/stable/debian/bookworm.md)
+- [Debian Bullseye](docs/stable/debian/bullseye.md)
+- [Debian Bookworm (oldstable)](docs/stable/debian/bookworm.md)
 - [Debian Sid (unstable)](docs/stable/debian/sid.md)
-- [Debian Trixie (testing)](docs/stable/debian/trixie.md)
+- [Debian Trixie (stable)](docs/stable/debian/trixie.md)
+- [Debian Sid (unstable)](docs/stable/debian/sid.md)
+- [Debian Forky (testing)](docs/stable/debian/forky.md)
 - [Raspbian Stretch (for Raspberry Pi)](docs/stable/raspbian/stretch.md)
 - [Raspbian Buster (for Raspberry Pi)](docs/stable/raspbian/buster.md)
 - [Raspbian Bullseye (for Raspberry Pi)](docs/stable/raspbian/bullseye.md)
 - [Raspbian Bookworm (for Raspberry Pi)](docs/stable/raspbian/bookworm.md)
+- [Raspbian Trixie (for Raspberry Pi)](docs/stable/raspbian/trixie.md)
 - [CentOS 7](docs/stable/centos/7.md)
 - [CentOS 8](docs/stable/centos/8.md)
 - [CentOS Stream 9](docs/stable/centos/9.md)

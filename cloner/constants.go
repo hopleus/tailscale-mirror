@@ -118,6 +118,13 @@ var OSTracks = []OSTrack{
 		Channel:     "stable",
 	},
 	{
+		OS:          "ubuntu",
+		Version:     "questing",
+		PackageType: "apt",
+		AptKeyType:  "keyring",
+		Channel:     "stable",
+	},
+	{
 		OS:          "debian",
 		Version:     "stretch",
 		PackageType: "apt",
@@ -160,6 +167,20 @@ var OSTracks = []OSTrack{
 		Channel:     "stable",
 	},
 	{
+		OS:          "debian",
+		Version:     "sid",
+		PackageType: "apt",
+		AptKeyType:  "keyring",
+		Channel:     "stable",
+	},
+	{
+		OS:          "debian",
+		Version:     "forky",
+		PackageType: "apt",
+		AptKeyType:  "keyring",
+		Channel:     "stable",
+	},
+	{
 		OS:          "raspbian",
 		Version:     "stretch",
 		PackageType: "apt",
@@ -183,6 +204,13 @@ var OSTracks = []OSTrack{
 	{
 		OS:          "raspbian",
 		Version:     "bookworm",
+		PackageType: "apt",
+		AptKeyType:  "keyring",
+		Channel:     "stable",
+	},
+	{
+		OS:          "raspbian",
+		Version:     "trixie",
 		PackageType: "apt",
 		AptKeyType:  "keyring",
 		Channel:     "stable",
@@ -266,7 +294,7 @@ const (
 	dataDir    = "../data"
 	docDir     = "../docs"
 	stubDir    = "../stubs"
-	minVersion = "1.88.1"
+	minVersion = "1.88.3"
 
 	regExpReleasePackagePattern = `\w{32}\s\d+(.*Packages(\.gz)?)\s`
 	regExpPackageSectionPattern = `(?m)(\n\n|\n$)`

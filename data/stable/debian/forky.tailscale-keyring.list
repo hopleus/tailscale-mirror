@@ -1,0 +1,2 @@
+# Tailscale packages for debian forky
+deb [signed-by=/usr/share/keyrings/tailscale-mirror-archive-keyring.gpg] https://raw.githubusercontent.com/hopleus/tailscale-mirror/main/data/stable/debian forky main
