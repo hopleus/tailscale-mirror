@@ -459,6 +459,44 @@ SHA1: 79036e7bb78de10a2ec02e1a68d0d3ade154a894
 SHA256: 0d8cd0640d4ae7fa5a24aa325ae6b09d6ed80ee322a6b57aeb2c0714425c8860
 
 Package: tailscale
+Version: 1.90.4
+Section: net
+Priority: extra
+Architecture: mipsel
+Maintainer: Tailscale Inc <info@tailscale.com>
+Installed-Size: 62672
+Replaces: tailscale-relay
+Depends: iptables
+Recommends: tailscale-archive-keyring (>= 1.35.181), iproute2
+Conflicts: tailscale-relay
+Homepage: https://www.tailscale.com
+Description: The easiest, most secure, cross platform way to use WireGuard + oauth2 + 2FA/SSO
+Filename: pool/tailscale_1.90.4_mipsel.deb
+Size: 29591732
+MD5sum: b577337117f6a17947ff548017095106
+SHA1: da4cfe0d1e2081d2fc6520193aaa95462a7c6b99
+SHA256: f03883c634b6f4f7062298dd8fe471920e7b9b2fcef5ff519f46297df4149b8f
+
+Package: tailscale
+Version: 1.90.3
+Section: net
+Priority: extra
+Architecture: mipsel
+Maintainer: Tailscale Inc <info@tailscale.com>
+Installed-Size: 62676
+Replaces: tailscale-relay
+Depends: iptables
+Recommends: tailscale-archive-keyring (>= 1.35.181), iproute2
+Conflicts: tailscale-relay
+Homepage: https://www.tailscale.com
+Description: The easiest, most secure, cross platform way to use WireGuard + oauth2 + 2FA/SSO
+Filename: pool/tailscale_1.90.3_mipsel.deb
+Size: 29598010
+MD5sum: 21caf7870bb3f749248855a0498bf5af
+SHA1: 0fa424fc8cb8dfeb7d7b5e59d8e6b732c9e24c45
+SHA256: be1012702331e16fdd4e23b2a475196d65d860caaadaf9ce5d46be3303dab799
+
+Package: tailscale
 Version: 1.2.7
 Section: net
 Priority: extra
@@ -753,6 +791,25 @@ SHA1: 947c238511666824d5a32a2c530a9d0e732dc4a2
 SHA256: 3f3014ad798792449ccfe7d4c01c818af99786c092296fea4a0da8cfd032906d
 
 Package: tailscale
+Version: 1.90.1
+Section: net
+Priority: extra
+Architecture: mipsel
+Maintainer: Tailscale Inc <info@tailscale.com>
+Installed-Size: 62586
+Replaces: tailscale-relay
+Depends: iptables
+Recommends: tailscale-archive-keyring (>= 1.35.181), iproute2
+Conflicts: tailscale-relay
+Homepage: https://www.tailscale.com
+Description: The easiest, most secure, cross platform way to use WireGuard + oauth2 + 2FA/SSO
+Filename: pool/tailscale_1.90.1_mipsel.deb
+Size: 29552866
+MD5sum: 236a00502c780bbfbbfd43a19081735e
+SHA1: 13d7ded8fa2cf076d22ca623ef978548dba6f282
+SHA256: 6e9ec3df39e80c113387d70d5cdf88fae7b5225554059b107759b24ff36dc6f6
+
+Package: tailscale
 Version: 1.22.0
 Section: net
 Priority: extra
@@ -805,6 +862,25 @@ Size: 18240498
 MD5sum: 3027eb04d5cda1560338a217664b5efd
 SHA1: e996aa21ffd4080ac090c97a1e5f37bc980e89e5
 SHA256: 22937b05705ee0d7ac99ffdec5120c065c9eacdef132b30afc753cfc2205d902
+
+Package: tailscale
+Version: 1.90.2
+Section: net
+Priority: extra
+Architecture: mipsel
+Maintainer: Tailscale Inc <info@tailscale.com>
+Installed-Size: 62676
+Replaces: tailscale-relay
+Depends: iptables
+Recommends: tailscale-archive-keyring (>= 1.35.181), iproute2
+Conflicts: tailscale-relay
+Homepage: https://www.tailscale.com
+Description: The easiest, most secure, cross platform way to use WireGuard + oauth2 + 2FA/SSO
+Filename: pool/tailscale_1.90.2_mipsel.deb
+Size: 29598758
+MD5sum: 47392e261027fb402eee213067c0f822
+SHA1: ed28756c6192f61d0d2035bdc04ca4f1becde1f6
+SHA256: f63e9c47e9d508f0abfa42cfbaa420508c9c764b61f57b6c6c7a429e4bfbf845
 
 Package: tailscale
 Version: 1.22.1
@@ -899,6 +975,25 @@ Size: 23147116
 MD5sum: bceab07679d8dd48ae9f4b94fae5a22f
 SHA1: 0d4e2f6c8698ccdd9993f2e824f714f98d0010d2
 SHA256: 6f945f8c9af60b5b243ea8cd83fbbed01ab8fc4d2203f06b4e724b00c7572157
+
+Package: tailscale
+Version: 1.88.4
+Section: net
+Priority: extra
+Architecture: mipsel
+Maintainer: Tailscale Inc <info@tailscale.com>
+Installed-Size: 64105
+Replaces: tailscale-relay
+Depends: iptables
+Recommends: tailscale-archive-keyring (>= 1.35.181), iproute2
+Conflicts: tailscale-relay
+Homepage: https://www.tailscale.com
+Description: The easiest, most secure, cross platform way to use WireGuard + oauth2 + 2FA/SSO
+Filename: pool/tailscale_1.88.4_mipsel.deb
+Size: 30297040
+MD5sum: dce90c7964e9774b67cc8ff7deb39e64
+SHA1: 316d8aede1427f626e4178ae71836ea125430c18
+SHA256: 2a3605fb3897d5a0842a1d51d1e2f4a67d27385a4fdd83fb5cbb93eccedbc73e
 
 Package: tailscale
 Version: 1.72.1
