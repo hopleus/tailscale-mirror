@@ -1,11 +1,11 @@
 # TailScale APT Зеркало
-![Последняя версия](https://img.shields.io/badge/Последняя_версия-1.90.9-blue)
+![Последняя версия](https://img.shields.io/badge/Последняя_версия-1.92.1-blue)
 
 APT зеркало для [pkgs.tailscale.com](https://pkgs.tailscale.com) ([GitHub](https://github.com/tailscale/tailscale))
 
 ### Доступные версии:
-- 1.66.0 - 1.90.9 (debian, raspbian, ubuntu)
-- 1.84.0 - 1.90.9 (centos, fedora, rhel, amazon linux)
+- 1.66.0 - 1.92.1 (debian, raspbian, ubuntu)
+- 1.84.0 - 1.92.1 (centos, fedora, rhel, amazon linux)
 
 ## Документация
 - [Ubuntu 16.04 LTS (Xenial)](docs/stable/ubuntu/xenial.md)

@@ -5,6 +5,7 @@ import (
 	"io"
 	"net/http"
 	"os"
+	"time"
 )
 
 func DownloadFiles(url []string, rewrite bool) {
@@ -46,7 +47,14 @@ func DownloadFile(url, path string, rewrite bool) error {
 	content, err := http.Get(url)
 	if err != nil {
 		fmt.Printf("[Error] DownloadFile - http.Get - %s\n", url)
-		return fmt.Errorf("http.Get - %w", err)
+		time.Sleep(5 * time.Second)
+
+		content, err = http.Get(url)
+		if err != nil {
+			fmt.Printf("[Error] DownloadFile (retry) - http.Get - %s\n", url)
+
+			return fmt.Errorf("http.Get - %w", err)
+		}
 	}
 
 	defer content.Body.Close()
