@@ -7,6 +7,12 @@ APT зеркало для [pkgs.tailscale.com](https://pkgs.tailscale.com) ([Git
 - 1.66.0 - 1.94.1 (debian, raspbian, ubuntu)
 - 1.84.0 - 1.94.1 (centos, fedora, rhel, amazon linux)
 
+## Установка
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/hopleus/tailscale-mirror/main/install.sh | sh
+```
+
 ## Документация
 - [Ubuntu 16.04 LTS (Xenial)](docs/stable/ubuntu/xenial.md)
 - [Ubuntu 18.04 LTS (Bionic)](docs/stable/ubuntu/bionic.md)
@@ -36,16 +42,3 @@ APT зеркало для [pkgs.tailscale.com](https://pkgs.tailscale.com) ([Git
 - [Raspbian Buster (for Raspberry Pi)](docs/stable/raspbian/buster.md)
 - [Raspbian Bullseye (for Raspberry Pi)](docs/stable/raspbian/bullseye.md)
 - [Raspbian Bookworm (for Raspberry Pi)](docs/stable/raspbian/bookworm.md)
-- [Raspbian Trixie (for Raspberry Pi)](docs/stable/raspbian/trixie.md)
-- [CentOS 7](docs/stable/centos/7.md)
-- [CentOS 8](docs/stable/centos/8.md)
-- [CentOS Stream 9](docs/stable/centos/9.md)
-- [CentOS Stream 10](docs/stable/centos/10.md)
-- [Fedora 40 and earlier](docs/stable/fedora/fedora.md)
-- [Fedora 41 and later](docs/stable/fedora/fedora.md)
-- [RHEL 7](docs/stable/rhel/7.md)
-- [RHEL 8](docs/stable/rhel/8.md)
-- [RHEL 9](docs/stable/rhel/9.md)
-- [Amazon Linux 2](docs/stable/amazon-linux/2.md)
-- [Amazon Linux 2022](docs/stable/amazon-linux/2022.md)
-- [Amazon Linux 2023](docs/stable/amazon-linux/2023.md)
