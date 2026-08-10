@@ -1,11 +1,11 @@
 # TailScale APT Зеркало
-![Последняя версия](https://img.shields.io/badge/Последняя_версия-1.94.1-blue)
+![Последняя версия](https://img.shields.io/badge/Последняя_версия-1.102.1-blue)
 
 APT зеркало для [pkgs.tailscale.com](https://pkgs.tailscale.com) ([GitHub](https://github.com/tailscale/tailscale))
 
 ### Доступные версии:
-- 1.66.0 - 1.94.1 (debian, raspbian, ubuntu)
-- 1.84.0 - 1.94.1 (centos, fedora, rhel, amazon linux)
+- 1.66.0 - 1.102.1 (debian, raspbian, ubuntu)
+- 1.84.0 - 1.102.1 (centos, fedora, rhel, amazon linux)
 
 ## Документация
 - [Ubuntu 16.04 LTS (Xenial)](docs/stable/ubuntu/xenial.md)
@@ -20,15 +20,16 @@ APT зеркало для [pkgs.tailscale.com](https://pkgs.tailscale.com) ([Git
 - [Ubuntu 22.10 (Kinetic Kudu)](docs/stable/ubuntu/kinetic.md)
 - [Ubuntu 23.04 (Lunar Lobster)](docs/stable/ubuntu/lunar.md)
 - [Ubuntu 23.10 (Mantic Minotaur)](docs/stable/ubuntu/mantic.md)
+- [Ubuntu 23.10 (Mantic Minotaur, minotaur)](docs/stable/ubuntu/minotaur.md)
 - [Ubuntu 24.04 (Noble Numbat)](docs/stable/ubuntu/noble.md)
 - [Ubuntu 24.10 (Oracular Oriole)](docs/stable/ubuntu/oracular.md)
 - [Ubuntu 25.04 (Plucky Puffin)](docs/stable/ubuntu/plucky.md)
 - [Ubuntu 25.10 (Questing Quokka)](docs/stable/ubuntu/questing.md)
+- [Ubuntu 26.04 (Resolute Raccoon)](docs/stable/ubuntu/resolute.md)
 - [Debian Stretch](docs/stable/debian/stretch.md)
 - [Debian Buster](docs/stable/debian/buster.md)
 - [Debian Bullseye](docs/stable/debian/bullseye.md)
 - [Debian Bookworm (oldstable)](docs/stable/debian/bookworm.md)
-- [Debian Sid (unstable)](docs/stable/debian/sid.md)
 - [Debian Trixie (stable)](docs/stable/debian/trixie.md)
 - [Debian Sid (unstable)](docs/stable/debian/sid.md)
 - [Debian Forky (testing)](docs/stable/debian/forky.md)
@@ -41,11 +42,11 @@ APT зеркало для [pkgs.tailscale.com](https://pkgs.tailscale.com) ([Git
 - [CentOS 8](docs/stable/centos/8.md)
 - [CentOS Stream 9](docs/stable/centos/9.md)
 - [CentOS Stream 10](docs/stable/centos/10.md)
-- [Fedora 40 and earlier](docs/stable/fedora/fedora.md)
-- [Fedora 41 and later](docs/stable/fedora/fedora.md)
+- [Fedora](docs/stable/fedora/fedora.md)
 - [RHEL 7](docs/stable/rhel/7.md)
 - [RHEL 8](docs/stable/rhel/8.md)
 - [RHEL 9](docs/stable/rhel/9.md)
+- [RHEL 10](docs/stable/rhel/10.md)
 - [Amazon Linux 2](docs/stable/amazon-linux/2.md)
 - [Amazon Linux 2022](docs/stable/amazon-linux/2022.md)
 - [Amazon Linux 2023](docs/stable/amazon-linux/2023.md)

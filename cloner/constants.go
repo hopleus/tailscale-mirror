@@ -1,7 +1,7 @@
 package main
 
 var ArchList = []string{"i386", "x86_64", "aarch64", "riscv64"}
-var OS = []string{"ubuntu", "debian", "raspian", "centos", "fedora", "rhel", "amazon-linux", "oracle", "photon"}
+var OS = []string{"ubuntu", "debian", "raspbian", "centos", "fedora", "rhel", "amazon-linux", "oracle", "photon"}
 var OSTracks = []OSTrack{
 	// ubuntu (legacy)
 	{
@@ -125,6 +125,13 @@ var OSTracks = []OSTrack{
 		Channel:     "stable",
 	},
 	{
+		OS:          "ubuntu",
+		Version:     "resolute",
+		PackageType: "apt",
+		AptKeyType:  "keyring",
+		Channel:     "stable",
+	},
+	{
 		OS:          "debian",
 		Version:     "stretch",
 		PackageType: "apt",
@@ -162,13 +169,6 @@ var OSTracks = []OSTrack{
 	{
 		OS:          "debian",
 		Version:     "trixie",
-		PackageType: "apt",
-		AptKeyType:  "keyring",
-		Channel:     "stable",
-	},
-	{
-		OS:          "debian",
-		Version:     "sid",
 		PackageType: "apt",
 		AptKeyType:  "keyring",
 		Channel:     "stable",
@@ -241,7 +241,7 @@ var OSTracks = []OSTrack{
 		PackageType: "dnf",
 		Channel:     "stable",
 	},
-	// fedora (dhf)
+	// fedora (dnf)
 	{
 		OS:          "fedora",
 		PackageType: "dnf",
@@ -264,6 +264,12 @@ var OSTracks = []OSTrack{
 	{
 		OS:          "rhel",
 		Version:     "9",
+		PackageType: "dnf",
+		Channel:     "stable",
+	},
+	{
+		OS:          "rhel",
+		Version:     "10",
 		PackageType: "dnf",
 		Channel:     "stable",
 	},
@@ -294,7 +300,7 @@ const (
 	dataDir    = "../data"
 	docDir     = "../docs"
 	stubDir    = "../stubs"
-	minVersion = "1.94.1"
+	minVersion = "1.102.2"
 
 	regExpReleasePackagePattern = `\w{32}\s\d+(.*Packages(\.gz)?)\s`
 	regExpPackageSectionPattern = `(?m)(\n\n|\n$)`

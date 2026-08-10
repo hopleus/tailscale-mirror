@@ -1,0 +1,15 @@
+Package: tailscale-archive-keyring
+Version: 1.35.181
+Section: net
+Priority: extra
+Architecture: all
+Maintainer: Tailscale Inc <info@tailscale.com>
+Installed-Size: 2
+Homepage: https://www.tailscale.com
+Description: GnuPG keys of the Tailscale package archive
+Filename: pool/tailscale-archive-keyring_1.35.181_all.deb
+Size: 3082
+MD5sum: a1e2c93a16d589d13191ba707417cc21
+SHA1: 42b136379570b0c37941f1ae4fd3265fb28b294b
+SHA256: dfefafbbc1046114f8c99256a8e6fbec44d27bd2dd8db8ab9d4c5a99087aec90
+
